@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .header {
   display: flex;
   position: relative;
@@ -91,7 +93,7 @@
     position: fixed;
     right: 50%;
     top: 22px;
-    transform: translateX(($width-container/2 - $header-padding));
+    transform: translateX((math.div($width-container, 2) - $header-padding));
 
     @include for-container-width {
       right: 20px;
