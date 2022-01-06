@@ -1,0 +1,23 @@
+.flags-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 36px;
+  column-gap: 60px;
+  list-style: none;
+  overflow: hidden;
+
+  @include for-tablet {
+    height: 450px;
+    overflow: hidden;
+  }
+
+  &__row {
+    display: flex;
+    gap: 60px;
+  }
+
+  &__item {
+    max-width: 180px;
+  }
+}

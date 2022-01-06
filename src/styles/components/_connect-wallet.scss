@@ -1,0 +1,61 @@
+.connect-wallet {
+  height: 40px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 23px;
+  background: transparent;
+  border: 2px solid $white;
+  color: $white;
+  text-transform: uppercase;
+  border-radius: 4px;
+  max-width: 250px;
+  overflow: hidden;
+
+  @include for-phone-only {
+    padding: 0 10px;
+    gap: 5px;
+    font-size: 12px;
+  }
+
+  &__text-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  &__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &:hover {
+    cursor: pointer;
+    .connect-wallet__log-out {
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    svg path {
+      fill: $white;
+    }
+  }
+
+  &__log-out {
+    position: absolute;
+    opacity: 0;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+    transition: all 0.3s ease-in-out;
+
+    @include for-tablet {
+      opacity: 1;
+    }
+  }
+}

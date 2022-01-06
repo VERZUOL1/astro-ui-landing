@@ -1,0 +1,60 @@
+.communities {
+  background-color: #6038d0;
+  font-family: $common-font;
+  color: $white;
+  padding: 69px 156px 259px;
+  overflow: hidden;
+
+  @include for-desktop {
+    padding: 69px 56px 259px;
+  }
+
+  @include for-tablet {
+    padding: 52px 24px 110px 24px;
+  }
+
+  &__title {
+    font-family: $second-font;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: 78px;
+
+    @include for-tablet {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__statistic-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 62px;
+    flex-wrap: wrap;
+    row-gap: 29px;
+  }
+
+  &__statistic {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__count {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    text-align: center;
+    font-family: $second-font;
+  }
+
+  &__count-explanation {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 105%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

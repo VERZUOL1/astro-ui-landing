@@ -1,0 +1,158 @@
+.footer {
+  background-color: $common-color;
+  width: 100%;
+  padding: 45px 156px 28px;
+  color: $white;
+  font-family: $common-font;
+
+  &__container {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+  }
+
+  @include for-tablet-big {
+    padding: 29px 40px 35px;
+  }
+
+  @include for-tablet {
+    padding-bottom: 65px;
+  }
+
+  @include for-phone-only {
+    padding: 29px 24px 65px;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    @include for-phone-only {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__star-icon {
+    text-align: center;
+    margin-bottom: 15px;
+
+    @include for-phone-only {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__title {
+    font-family: $second-font;
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+
+    &-link {
+      text-decoration: none;
+      color: #5050ff;
+    }
+
+    @include for-tablet {
+      width: 280px;
+      padding: 0 10px;
+      margin: 0 auto;
+    }
+
+    @include for-small-phone {
+      width: unset;
+      padding: unset;
+      margin: 0 auto;
+    }
+  }
+
+  &__center {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+
+    @include for-phone-only {
+      flex-direction: column;
+      align-items: center;
+      gap: 75px;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    list-style: none;
+    gap: 26px;
+    align-items: center;
+  }
+
+  &__social-item {
+    max-width: 24px;
+    transition: all 0.3 ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    @include for-phone-only {
+      gap: 0;
+    }
+  }
+
+  &__powered-by {
+    @include for-phone-only {
+      margin-top: -5px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include for-tablet {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  &__privacy-wrapper {
+    display: flex;
+    gap: 24px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    @include for-tablet {
+      gap: 16px;
+    }
+  }
+
+  &__privacy,
+  &__terms {
+    min-width: 168px;
+
+    @include for-tablet {
+      min-width: unset;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 18px;
+
+    @include for-tablet {
+      width: 100%;
+    }
+  }
+}

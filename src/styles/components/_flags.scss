@@ -1,0 +1,45 @@
+.flags {
+  position: relative;
+  padding: 177px 0 117px;
+
+  @include for-tablet {
+    padding: 141px 0 23px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: -104px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__title {
+    max-width: 806px;
+    margin: 0 auto 44px;
+    font-family: $second-font;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    text-align: center;
+
+    @include for-tablet {
+      padding: 0 40px;
+      font-size: 24px;
+    }
+  }
+
+  &__join-btn {
+    margin: 0 auto 94px;
+    background-color: $common-color;
+    color: $white;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @include for-tablet {
+      margin-bottom: 16px;
+    }
+  }
+}

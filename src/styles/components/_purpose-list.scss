@@ -1,0 +1,48 @@
+.purpose-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  &__item {
+    display: flex;
+    width: 46%;
+    margin-bottom: 110px;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    @include for-tablet {
+      width: 100%;
+      flex-wrap: wrap;
+      row-gap: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__icon {
+    min-width: 110px;
+    margin-right: 40px;
+  }
+
+  &__description {
+    max-width: 315px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 105%;
+    margin-bottom: 20px;
+
+    @include for-tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

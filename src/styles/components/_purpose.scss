@@ -1,0 +1,58 @@
+.purpose {
+  background-color: $common-color;
+
+  padding: 117px 150px 10px 163px;
+  font-family: $common-font;
+  color: $white;
+
+  @include for-desktop {
+    padding: 100px 44px 20px;
+  }
+
+  @include for-tablet {
+    padding: 52px 24px 47px;
+  }
+
+  &__container {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 100px;
+
+    @include for-tablet {
+      justify-content: center;
+      flex-wrap: wrap;
+      row-gap: 32px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    font-family: $second-font;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+
+    @include for-tablet {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 140%;
+    margin-top: 7px;
+    width: 655px;
+
+    @include for-tablet {
+      font-size: 16px;
+      margin-top: unset;
+    }
+  }
+}

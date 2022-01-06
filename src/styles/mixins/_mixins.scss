@@ -1,0 +1,35 @@
+@mixin for-container-width {
+  @media (max-width: $width-container) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-big {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-phone-only {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin for-small-phone {
+  @media (max-width: 350px) {
+    @content;
+  }
+}

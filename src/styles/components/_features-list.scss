@@ -1,0 +1,72 @@
+.features-list {
+  list-style: none;
+
+  &__item {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-content: center;
+
+    @include for-tablet {
+      flex-direction: column-reverse;
+      gap: unset;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-reverse {
+      flex-direction: row-reverse;
+
+      @include for-tablet {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__icon {
+    width: 360px;
+    position: relative;
+
+    @include for-tablet {
+      width: unset;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__description {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 360px;
+
+    @include for-tablet {
+      width: unset;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 105%;
+    text-transform: uppercase;
+    color: $common-color;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 140%;
+    color: #1a211e;
+    max-width: 600px;
+  }
+
+  &__margin-top {
+    margin-top: 25px;
+
+    @include for-tablet {
+      margin-top: unset;
+    }
+  }
+}

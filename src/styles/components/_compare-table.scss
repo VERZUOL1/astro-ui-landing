@@ -1,0 +1,57 @@
+.compare-table {
+  list-style: none;
+
+  &__head {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 105%;
+    position: relative;
+    min-width: 264px;
+    text-align: center;
+    margin-bottom: 38px;
+
+    @include for-tablet {
+      min-width: 155px;
+    }
+
+    &-vs::after {
+      content: 'vs';
+      text-transform: none;
+      position: absolute;
+      right: -12px;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 140%;
+      top: -1px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    gap: 22px;
+  }
+
+  &__item {
+    text-align: center;
+    min-width: 264px;
+    font-size: 18px;
+    line-height: 140%;
+
+    @include for-tablet {
+      min-width: 160px;
+      max-width: 155px;
+    }
+  }
+
+  &-vs::after {
+    content: 'vs';
+    position: absolute;
+    right: -12px;
+    font-size: 18px;
+    line-height: 140%;
+  }
+}

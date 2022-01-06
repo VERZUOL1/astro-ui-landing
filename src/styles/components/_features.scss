@@ -1,0 +1,25 @@
+.features {
+  padding: 93px 40px 50px;
+  background: #fff;
+  font-family: $common-font, sans-serif;
+  overflow: hidden;
+
+  @include for-tablet {
+    padding: 40px 24px 50px;
+  }
+
+  &__title {
+    color: #0e2e20;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    font-family: $second-font;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include for-tablet {
+      font-size: 24px;
+      margin-bottom: 80px;
+    }
+  }
+}

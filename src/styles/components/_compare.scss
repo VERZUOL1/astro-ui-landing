@@ -1,0 +1,67 @@
+.compare {
+  padding: 75px 154px;
+  color: $common-color;
+  font-family: $common-font, sans-serif;
+  background-color: #e8e0ff;
+
+  @include for-desktop {
+    padding: 52px 100px 95px;
+  }
+
+  @include for-tablet-big {
+    padding: 52px 50px 95px;
+  }
+
+  @include for-tablet {
+    padding: 52px 24px 95px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 65px;
+
+    @include for-tablet {
+      flex-direction: column;
+      margin-bottom: 52px;
+    }
+  }
+
+  &__title {
+    font-family: $second-font, sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    max-width: 320px;
+    margin-right: 157px;
+
+    @include for-desktop {
+      margin-right: 100px;
+    }
+
+    @include for-tablet-big {
+      margin-right: 80px;
+    }
+
+    @include for-tablet {
+      font-size: 24px;
+      margin-right: unset;
+      text-align: center;
+      max-width: unset;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 140%;
+    max-width: 650px;
+    height: fit-content;
+    margin-top: 7px;
+
+    @include for-tablet {
+      font-size: 16px;
+      margin-top: unset;
+    }
+  }
+}

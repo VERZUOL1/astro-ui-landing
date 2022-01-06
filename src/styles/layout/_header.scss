@@ -1,0 +1,110 @@
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  max-width: $width-container;
+  margin: auto;
+  padding: $header-padding;
+  gap: 10px;
+  padding-right: 220px;
+
+  @include for-desktop {
+    flex-wrap: wrap;
+  }
+
+  @include for-tablet-big {
+    column-gap: 5px;
+  }
+
+  @include for-tablet {
+    justify-content: unset;
+    padding-right: unset;
+    flex-wrap: wrap;
+    row-gap: 0px;
+    column-gap: 5px;
+    padding-top: 15px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 400;
+    white-space: nowrap;
+
+    @include for-tablet-big {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+    }
+
+    @include for-tablet {
+      margin-top: -12px;
+    }
+  }
+
+  &__logo-astro {
+    flex-grow: 1;
+
+    @include for-tablet {
+      flex-grow: unset;
+      width: 100%;
+    }
+
+    @include for-phone-only {
+      svg {
+        width: 100px;
+      }
+    }
+  }
+
+  &__logo-near {
+    position: relative;
+    top: 2px;
+
+    @include for-tablet-big {
+      svg {
+        width: 70px;
+      }
+    }
+
+    @include for-tablet {
+      margin-top: -12px;
+
+      svg {
+        width: 50px;
+      }
+    }
+  }
+
+  &__sign-in {
+    @include for-tablet {
+      position: absolute;
+      right: 20px;
+      top: 16px;
+    }
+  }
+
+  &__join {
+    position: fixed;
+    right: 50%;
+    top: 22px;
+    transform: translateX(($width-container/2 - $header-padding));
+
+    @include for-container-width {
+      right: 20px;
+      transform: unset;
+    }
+
+    @include for-tablet {
+      top: unset;
+      bottom: 20px;
+    }
+
+    @include for-small-phone {
+      right: 10px;
+    }
+  }
+}

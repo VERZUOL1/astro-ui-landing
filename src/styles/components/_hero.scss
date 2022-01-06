@@ -1,0 +1,80 @@
+.hero {
+  background-color: $main-dark;
+  color: $white;
+  font-family: $common-font;
+  padding-bottom: 87px;
+  position: relative;
+  overflow: hidden;
+
+  @include for-tablet {
+    padding-bottom: unset;
+  }
+
+  &__container {
+    max-width: 670px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    font-family: $second-font;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    margin-top: 138px;
+    text-align: center;
+    padding: 0 10px;
+
+    @include for-tablet {
+      margin-top: 40px;
+    }
+  }
+
+  &__text {
+    font-family: $common-font;
+    font-size: 24px;
+    line-height: 140%;
+    margin-top: 34px;
+    text-align: center;
+
+    @include for-tablet {
+      font-size: 16px;
+      margin-top: 24px;
+      margin-bottom: 32px;
+      padding: 0 10px;
+      min-height: unset;
+      max-width: 400px;
+    }
+  }
+
+  &__join-btn {
+    width: 260px;
+    margin-top: 30px;
+
+    @include for-small-phone {
+      width: 200px;
+    }
+  }
+
+  &__background {
+    left: 50%;
+    transform: translate(-50%, -5%);
+    position: absolute;
+    z-index: 1;
+    opacity: 0.6;
+
+    @include for-tablet {
+      top: -100px;
+      transform: translateX(-48%);
+    }
+
+    svg {
+      width: 1884px;
+      height: 818px;
+    }
+  }
+}
